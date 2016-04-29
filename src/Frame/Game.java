@@ -8,6 +8,8 @@ import javax.swing.JPanel;
 	
 	@SuppressWarnings("serial")
 	public class Game extends JPanel{
+		
+		//Initzial Variables
 		int x = 0;
 		int y = 0;
 		int durchmesser = 50;
@@ -17,6 +19,8 @@ import javax.swing.JPanel;
 		public static int w;
 		
 		public static void main(String[] args) throws InterruptedException {
+			
+			//Create Frame
 			JFrame frame = new JFrame("Sample Frame");
 			Game spiel = new Game();
 			frame.add(spiel);
@@ -34,11 +38,13 @@ import javax.swing.JPanel;
 			}
 		}
 		
+		//Move the ball
 		private void moveBall(){
 			x = x + speedX;
 			y = y + speedY;
 		}
 		
+		//Collision with wall
 		public void BallCollision(){
 			if(x + durchmesser > w){
 				speedX = speedX > 0 ? -speedX : speedX;
@@ -54,6 +60,7 @@ import javax.swing.JPanel;
 			}
 		}
 		
+		//Draw Ball
 		@Override
 		public void paint(Graphics g){
 			super.paint(g);
