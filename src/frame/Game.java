@@ -67,7 +67,7 @@ import javax.swing.JPanel;
 			super.paint(g);
 			Graphics2D ball = (Graphics2D) g;
 			ball.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-			ball.fillOval(x, y, durchmesser, durchmesser);
+			ball.fillOval(x, y, diameter, diameter);
 		}
 
 }
